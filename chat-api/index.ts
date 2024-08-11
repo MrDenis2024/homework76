@@ -18,7 +18,7 @@ const corsOptions: CorsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
-app.use('/', messagesRouter);
+app.use('/messages', messagesRouter);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
