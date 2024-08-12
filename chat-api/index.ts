@@ -1,6 +1,7 @@
 import express from "express";
 import cors, {CorsOptions} from 'cors';
 import messagesRouter from './routes/messages';
+import fileDb from './fileDb';
 
 const app = express();
 const port = 8000;
@@ -20,6 +21,12 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/messages', messagesRouter);
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+const run = async () => {
+  await fileDb.init();
+
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+};
+
+run().catch(console.error);

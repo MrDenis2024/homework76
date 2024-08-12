@@ -4,6 +4,12 @@ import fileDb from '../fileDb';
 
 const messagesRouter = express.Router();
 
+messagesRouter.get('/', async (req, res) => {
+  const queryDate = req.query.datetime as string;
+  const messages = await fileDb.getMessages(queryDate);
+  return res.send(messages);
+});
+
 messagesRouter.post('/', async (req, res) => {
   if(!req.body.message || !req.body.author) {
     return res.status(400).send({error: 'Author and message must be present in the request'});

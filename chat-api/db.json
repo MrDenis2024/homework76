@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "de6a472b-6137-42d4-bb76-cbeb4151506b",
+    "message": "Message1",
+    "author": "Den",
+    "datetime": "2024-08-11T07:14:32.249Z"
+  },
+  {
+    "id": "b5e40676-f7fb-46d7-a50f-4eff1bb77edb",
+    "message": "Message2",
+    "author": "Den",
+    "datetime": "2024-08-11T07:31:43.382Z"
+  },
+  {
+    "id": "af97ebf0-4a82-490e-b097-5586ca0d54e3",
+    "message": "Message3",
+    "author": "Den",
+    "datetime": "2024-08-11T07:32:25.816Z"
+  },
+  {
+    "id": "241e3ed6-3ace-4645-85fd-fd1b2b83d774",
+    "message": "Message4",
+    "author": "Den",
+    "datetime": "2024-08-11T07:32:28.980Z"
+  }
+]
