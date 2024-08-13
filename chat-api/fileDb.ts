@@ -1,5 +1,5 @@
 import {Message, MessageMutation} from './types';
-import {randomUUID} from 'node:crypto';
+import {randomUUID} from 'crypto';
 import {promises as fs} from 'fs';
 
 const fileName = './db.json';
