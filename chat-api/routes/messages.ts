@@ -6,6 +6,13 @@ const messagesRouter = express.Router();
 
 messagesRouter.get('/', async (req, res) => {
   const queryDate = req.query.datetime as string;
+  if (queryDate) {
+    const date = new Date(queryDate);
+    if (isNaN(date.getTime())) {
+      return res.status(400).send({ error: 'Invalid datetime format' });
+    }
+  }
+
   const messages = await fileDb.getMessages(queryDate);
   return res.send(messages);
 });

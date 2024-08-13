@@ -36,10 +36,10 @@ const MessageForm: React.FC<Props> = ({sendMessage, sendLoading}) => {
     <Grid item sx={{width: '100%', position: 'fixed', left: 0, bottom: 0, borderTop: '1px solid gray', backgroundColor: '#efecec'}}>
       <Grid container item component='form' justifyContent='space-between' alignItems='center' sx={{padding: '20px'}} onSubmit={submitFormHandler}>
         <Grid item>
-          <TextField label='Name' name='author' id='author' required onChange={inputChangeHandler} value={state.author} />
+          <TextField label='Name' name='author' id='author' required onChange={inputChangeHandler} value={state.author} sx={{backgroundColor: 'white'}} />
         </Grid>
         <Grid item>
-          <TextField multiline minRows={3} label='Message' name='message' id='message' required  sx={{width: '600px'}} onChange={inputChangeHandler} value={state.message}/>
+          <TextField multiline minRows={3} label='Message' name='message' id='message' required  sx={{width: '600px', backgroundColor: 'white'}} onChange={inputChangeHandler} value={state.message} />
         </Grid>
         <Grid item>
           <LoadingButton

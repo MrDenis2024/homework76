@@ -15,11 +15,10 @@ const fileDb = {
     }
   },
   async getMessages (queryDate: string) {
-    const date = new Date(queryDate);
-    if (isNaN(date.getDate())) {
-      return data.slice(-30);
-    } else {
+    if (queryDate) {
       return data.filter(message => message.datetime > queryDate);
+    } else {
+      return data.slice(-30);
     }
   },
   async addMessage(message: MessageMutation) {
